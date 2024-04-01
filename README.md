@@ -1,0 +1,1 @@
+# terraform練習用
