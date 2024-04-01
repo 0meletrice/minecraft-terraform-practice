@@ -1,0 +1,28 @@
+[
+  {
+    "name": "minecraft",
+    "image": "itzg/minecraft-server",
+    "essential": true,
+    "memory": 8192,
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-region": "ap-northeast-1",
+        "awslogs-stream-prefix": "minecraft",
+        "awslogs-group": "/ecs/minecraft"
+      }
+    },
+    "portMappings": [
+      {
+        "protocol": "tcp",
+        "containerPort": 80
+      }
+    ],
+    "environment": [
+      {
+        "name": "EULA",
+        "value": "TRUE"
+      }
+    ]
+  }
+]
